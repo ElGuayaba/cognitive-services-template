@@ -12,9 +12,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Namespace.ProjectName.Persi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Namespace.ProjectName.Test", "Namespace.ProjectName.Test", "{E0580806-7E63-4303-B71C-A26E3B167644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Api.WebApi", "Namespace.ProjectName.Api.WebApi\Namespace.ProjectName.Api.WebApi.csproj", "{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989} = {F7353AFD-95B4-4B4D-8EFE-C7DF03118B50}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
