@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Namespace.ProjectName.Test"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Api.WebApi", "Namespace.ProjectName.Api.WebApi\Namespace.ProjectName.Api.WebApi.csproj", "{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Application.Contract", "Namespace.ProjectName.Application.Contract\Namespace.ProjectName.Application.Contract.csproj", "{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Application.Implementation", "Namespace.ProjectName.Application.Implementation\Namespace.ProjectName.Application.Implementation.csproj", "{5ED335F7-8E3A-44D5-9D8E-3F0C83622831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +25,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989} = {F7353AFD-95B4-4B4D-8EFE-C7DF03118B50}
+		{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07} = {12A7F332-CF99-4A8D-A398-964D0C539978}
+		{5ED335F7-8E3A-44D5-9D8E-3F0C83622831} = {12A7F332-CF99-4A8D-A398-964D0C539978}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02D2BB7-8DE5-41C2-99B8-0AA5E2970D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED335F7-8E3A-44D5-9D8E-3F0C83622831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED335F7-8E3A-44D5-9D8E-3F0C83622831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED335F7-8E3A-44D5-9D8E-3F0C83622831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED335F7-8E3A-44D5-9D8E-3F0C83622831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
