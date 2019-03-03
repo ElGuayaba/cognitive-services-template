@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using static System.Object;
 
-namespace Namespace.ProjectName.Domain.Contract.Entity
+namespace Namespace.ProjectName.Domain.Entity.Entity
 {
     public abstract class AbstractEntity : IComparable<AbstractEntity>
     {

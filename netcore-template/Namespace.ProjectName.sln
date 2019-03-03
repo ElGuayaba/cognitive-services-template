@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Namespace.ProjectName.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Common.IoC", "Namespace.ProjectName.Common.IoC\Namespace.ProjectName.Common.IoC.csproj", "{0D4813FF-54CD-4328-80E7-8A981E5384C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespace.ProjectName.Domain.Entity", "Namespace.ProjectName.Domain.Entity\Namespace.ProjectName.Domain.Entity.csproj", "{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,7 @@ Global
 		{A45AC4F8-EB4C-4326-9A8B-3D058A0AA1EB} = {BF11E936-B23E-487B-A853-BCF1947C21E5}
 		{04082D5A-FA44-466B-9CEF-DED821BDCEA1} = {BF11E936-B23E-487B-A853-BCF1947C21E5}
 		{0D4813FF-54CD-4328-80E7-8A981E5384C3} = {90549097-1953-4091-BFEF-F2696A762FCA}
+		{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B} = {1BA75886-DBC9-4704-B9A4-0F4E5DCC8A56}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3D93DD7C-AE41-41FD-AAAA-CB52FE76C989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -92,5 +95,9 @@ Global
 		{0D4813FF-54CD-4328-80E7-8A981E5384C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4813FF-54CD-4328-80E7-8A981E5384C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4813FF-54CD-4328-80E7-8A981E5384C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283D62C8-B7F5-425B-A5FD-A8EE83EF3C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
