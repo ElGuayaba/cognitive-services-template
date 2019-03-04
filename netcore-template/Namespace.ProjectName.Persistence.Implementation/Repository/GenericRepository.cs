@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Namespace.ProjectName.Domain.Contract;
@@ -7,26 +9,49 @@ using Namespace.ProjectName.Persistence.Contract.Repository;
 
 namespace Namespace.ProjectName.Persistence.Implementation.Repository
 {
-    public class GenericRepository<T> : IAbstractGenericRepository<T> where T : IAggregateRoot
+    public class GenericRepository<T> : IGenericRepository<T> where T : class, IAggregateRoot
     {
         internal readonly DbContext Context;
         
         internal readonly DbSet<T> DbSet;
 
-        public GenericRepository(C dbDbContext)
+        public GenericRepository(DbContext dbContext)
         {
-            this.Context = dbDbContext ?? throw new ArgumentNullException(nameof(dbDbContext));
-            this.DbSet = dbDbContext.Set<T>();
+            Context = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            DbSet = dbContext.Set<T>();
         }
 
-        public virtual IEnumerable<T> GetAll()
-        {
-            return DbSet;
-        }
-
-        public virtual async Task<T> GetById(object id)
+        public async Task<T> FindById(object id)
         {
             return await DbSet.FindAsync(id);
+        }
+
+        public async Task<T> FindBy(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes)
+        {
+            var result = DbSet.Where(predicate);
+
+            result = includes.Aggregate(result, (current, includeExpression) => current.Include(includeExpression));
+
+            return await result.FirstOrDefaultAsync();
+        }
+
+        public virtual async Task<IEnumerable<T>> GetAll()
+        {
+            return await DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includes)
+        {
+            var result = DbSet.Where(i => true);
+
+            result = includes.Aggregate(result, (current, includeExpression) => current.Include(includeExpression));
+
+            return await result.ToListAsync();
+        }
+
+        public Task<IEnumerable<T>> SearchBy(Expression<Func<T, bool>> searchBy, params Expression<Func<T, object>>[] includes)
+        {
+            throw new NotImplementedException();
         }
 
         public virtual async Task<T> Insert(T entity)
