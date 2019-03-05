@@ -8,7 +8,7 @@ using Scrutor;
 
 namespace Namespace.ProjectName.Common.IoC
 {
-    public static class PersistenceConfiguration
+    public static class PersistenceExtension
     {
         public static IServiceCollection AddPersistenceDependencies(this IServiceCollection services, IConfiguration configuration)
         {
