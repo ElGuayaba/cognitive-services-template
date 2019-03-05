@@ -1,4 +1,4 @@
-namespace Namespace.ProjectName.Domain.Contract
+namespace Namespace.ProjectName.Domain.Entity
 {
     public interface IAggregateRoot
     {

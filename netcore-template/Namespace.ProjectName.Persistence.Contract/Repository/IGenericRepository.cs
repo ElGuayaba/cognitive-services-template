@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Namespace.ProjectName.Domain.Contract;
+using Namespace.ProjectName.Domain.Entity;
 
 namespace Namespace.ProjectName.Persistence.Contract.Repository
 {

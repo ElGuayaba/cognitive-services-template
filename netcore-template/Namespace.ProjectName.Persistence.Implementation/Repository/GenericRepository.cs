@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Namespace.ProjectName.Domain.Contract;
+using Namespace.ProjectName.Domain.Entity;
 using Namespace.ProjectName.Persistence.Contract.Repository;
 
 namespace Namespace.ProjectName.Persistence.Implementation.Repository
@@ -12,7 +12,6 @@ namespace Namespace.ProjectName.Persistence.Implementation.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : class, IAggregateRoot
     {
         internal readonly DbContext Context;
-        
         internal readonly DbSet<T> DbSet;
 
         public GenericRepository(DbContext dbContext)
