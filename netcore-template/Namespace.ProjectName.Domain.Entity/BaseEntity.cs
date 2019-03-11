@@ -1,19 +1,19 @@
 using System;
 
-namespace Namespace.ProjectName.Domain.Entity.Entity
+namespace Namespace.ProjectName.Domain.Entity
 {
-    public abstract class AbstractEntity : IComparable<AbstractEntity>
+    public abstract class BaseEntity : IComparable<BaseEntity>
     {
         public virtual Guid Id { get; set; }
 
-        public int CompareTo(AbstractEntity other)
+        public int CompareTo(BaseEntity other)
         {
             if (ReferenceEquals(this, other)) return 0;
             if (ReferenceEquals(null, other)) return 1;
             return Id.CompareTo(other.Id);
         }
 
-        protected bool Equals(AbstractEntity other)
+        protected bool Equals(BaseEntity other)
         {
             return Id.Equals(other.Id);
         }
@@ -23,7 +23,7 @@ namespace Namespace.ProjectName.Domain.Entity.Entity
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((AbstractEntity) obj);
+            return Equals((BaseEntity) obj);
         }
 
         public override int GetHashCode()
@@ -31,11 +31,11 @@ namespace Namespace.ProjectName.Domain.Entity.Entity
             return Id.GetHashCode();
         }
         
-        public static bool operator ==(AbstractEntity left, AbstractEntity right)
+        public static bool operator ==(BaseEntity left, BaseEntity right)
         {
             return left?.Equals(right) ?? Equals(right, null);
         }
-        public static bool operator !=(AbstractEntity left, AbstractEntity right)
+        public static bool operator !=(BaseEntity left, BaseEntity right)
         {
             return !(left == right);
         }

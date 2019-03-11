@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Namespace.ProjectName.Domain.Entity.Entity
+namespace Namespace.ProjectName.Domain.Entity
 {
-    public class Blog : AbstractEntity, IAggregateRoot
+    public class Blog : BaseEntity, IAggregateRoot
     {
         public string Title { get; set; }
         public string Description { get; set; }

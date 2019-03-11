@@ -1,8 +1,8 @@
 using System;
 
-namespace Namespace.ProjectName.Domain.Entity.Entity
+namespace Namespace.ProjectName.Domain.Entity
 {
-    public class Post : AbstractEntity, IAggregateRoot
+    public class Post : BaseEntity, IAggregateRoot
     {
         public string Title { get; set; }
         public string Content { get; set; }
