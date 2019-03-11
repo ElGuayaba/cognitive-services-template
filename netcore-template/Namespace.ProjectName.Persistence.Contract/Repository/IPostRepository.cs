@@ -1,4 +1,4 @@
-using Namespace.ProjectName.Domain.Entity.Entity;
+using Namespace.ProjectName.Domain.Entity;
 
 namespace Namespace.ProjectName.Persistence.Contract.Repository
 {

@@ -5,7 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Namespace.ProjectName.Domain.Contract\Namespace.ProjectName.Domain.Contract.csproj" />
       <ProjectReference Include="..\Namespace.ProjectName.Domain.Entity\Namespace.ProjectName.Domain.Entity.csproj" />
     </ItemGroup>
 

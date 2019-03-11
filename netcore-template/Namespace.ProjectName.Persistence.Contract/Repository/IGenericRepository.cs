@@ -11,8 +11,11 @@ namespace Namespace.ProjectName.Persistence.Contract.Repository
         Task<T> FindById(object id);
         Task<T> FindBy(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> GetAll();
+//        Task<IEnumerable<T>> GetAll(int page, int pageSize);
         Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includes);
+//        Task<IEnumerable<T>> GetAll(int page, int pageSize, params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> SearchBy(Expression<Func<T, bool>> searchBy, params Expression<Func<T, object>>[] includes);
+//        Task<IEnumerable<T>> SearchBy(Expression<Func<T, bool>> searchBy, int page, int pageSize, params Expression<Func<T, object>>[] includes);
         Task<T> Insert(T entity);
         T Update(T entityToUpdate);
         T Delete(object id);
