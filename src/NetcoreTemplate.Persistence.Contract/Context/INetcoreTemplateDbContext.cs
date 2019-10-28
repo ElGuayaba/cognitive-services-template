@@ -6,6 +6,6 @@ namespace NetcoreTemplate.Persistence.Contract.Context
     public interface INetcoreTemplateDbContext : IDbContext
     {
         DbSet<User> Users { get; set; }
-        DbSet<Profile> Profile { get; set; }
+        DbSet<Profile> Profiles { get; set; }
     }
 }
