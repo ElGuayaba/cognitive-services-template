@@ -1,6 +1,6 @@
-﻿﻿﻿﻿using System.Net;
+﻿using System.Net;
 
-   namespace NetcoreTemplate.Common.ErrorHandling
+namespace NetcoreTemplate.Common.ErrorHandling
 {
     public static class Helpers
     {
