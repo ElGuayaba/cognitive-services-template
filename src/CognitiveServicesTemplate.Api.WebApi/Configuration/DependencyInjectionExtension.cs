@@ -11,7 +11,6 @@ using Microsoft.IdentityModel.Tokens;
 using CognitiveServicesTemplate.Api.WebApi.Identity;
 using CognitiveServicesTemplate.Api.WebApi.Service.Contract;
 using CognitiveServicesTemplate.Api.WebApi.Service.Implementation;
-using CognitiveServicesTemplate.Persistence.Contract.Context;
 
 namespace CognitiveServicesTemplate.Api.WebApi.Configuration
 {
@@ -26,23 +25,16 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
             
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<ITokenLoginService, TokenLoginService>();
-            
-            // Application
-            services.AddApplicationServices(configuration);
-//            
-//            // Infrastructure
-//            services.AddInfrastructureClients(configuration);
-//            services.AddInfrastructureServices(configuration);
-//            
-            // Persistence
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-                services.AddDatabaseContextDevelopment(configuration);
-            else
-                services.AddDatabaseContext(configuration);
 
-            services.AddPersistenceRepositories(configuration);
+			// Application
+			services.AddApplicationServices(configuration);
 
-            return services;
+			// Infrastructure
+			// services.AddInfrastructureClients(configuration);
+			// services.AddInfrastructureServices(configuration);
+
+
+			return services;
         }
 
         private static IServiceCollection AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)
@@ -91,14 +83,6 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             return services;
-        }
-        
-        public static void InitializeDatabases(this IApplicationBuilder app, IConfiguration configuration)
-        {
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development") return;
-            
-            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
-            serviceScope.ServiceProvider.GetRequiredService<ICognitiveServicesTemplateDbContext>().Instance.Database.Migrate();
         }
     }
 }

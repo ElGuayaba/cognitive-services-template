@@ -10,7 +10,7 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
         private static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.Scan(scan => scan
-                .FromAssemblyOf<UserService>()
+                .FromAssemblyOf<OcrService>()
                 .AddClasses(classes =>
                     classes.Where(c => c.Name.EndsWith("Service")))
                 .UsingRegistrationStrategy(RegistrationStrategy.Skip)

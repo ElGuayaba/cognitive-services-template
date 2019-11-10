@@ -38,16 +38,11 @@
         <Compile Update="Configuration\DependencyInjectionExtension.Application.cs">
             <DependentUpon>DependencyInjectionExtension.cs</DependentUpon>
         </Compile>
-        <Compile Update="Configuration\DependencyInjectionExtension.Persistence.cs">
-            <DependentUpon>DependencyInjectionExtension.cs</DependentUpon>
-        </Compile>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\CognitiveServicesTemplate.Application.Contract\CognitiveServicesTemplate.Application.Contract.csproj" />
       <ProjectReference Include="..\CognitiveServicesTemplate.Application.Implementation\CognitiveServicesTemplate.Application.Implementation.csproj" />
-      <ProjectReference Include="..\CognitiveServicesTemplate.Persistence.Contract\CognitiveServicesTemplate.Persistence.Contract.csproj" />
-      <ProjectReference Include="..\CognitiveServicesTemplate.Persistence.Implementation\CognitiveServicesTemplate.Persistence.Implementation.csproj" />
     </ItemGroup>
 
 </Project>

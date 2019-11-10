@@ -1,10 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using CognitiveServicesTemplate.Common.ErrorHandling;
-using CognitiveServicesTemplate.Persistence.Contract.Context;
 using OperationResult;
 using static OperationResult.Helpers;
 using static CognitiveServicesTemplate.Common.ErrorHandling.Helpers;

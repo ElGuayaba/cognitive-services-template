@@ -19,7 +19,6 @@
     <ItemGroup>
       <ProjectReference Include="..\CognitiveServicesTemplate.Application.Contract\CognitiveServicesTemplate.Application.Contract.csproj" />
       <ProjectReference Include="..\CognitiveServicesTemplate.Common\CognitiveServicesTemplate.Common.csproj" />
-      <ProjectReference Include="..\CognitiveServicesTemplate.Domain\CognitiveServicesTemplate.Domain.csproj" />
     </ItemGroup>
 
 </Project>

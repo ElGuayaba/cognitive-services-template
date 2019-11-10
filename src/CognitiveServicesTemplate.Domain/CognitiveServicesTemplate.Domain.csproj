@@ -18,7 +18,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CognitiveServicesTemplate.Common\CognitiveServicesTemplate.Common.csproj" />
-      <ProjectReference Include="..\CognitiveServicesTemplate.Persistence.Contract\CognitiveServicesTemplate.Persistence.Contract.csproj" />
     </ItemGroup>
 
 </Project>
