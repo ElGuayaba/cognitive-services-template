@@ -5,7 +5,7 @@ using OperationResult;
 
 namespace CognitiveServicesTemplate.Application.Contract.Service
 {
-    public interface IUserService
+    public interface IOcrService
     {
         Task<Status<Error>> Create(string userId, CancellationToken cancellationToken = default);
     }

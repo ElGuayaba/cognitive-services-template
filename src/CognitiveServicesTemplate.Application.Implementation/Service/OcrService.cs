@@ -9,7 +9,7 @@ using static OperationResult.Helpers;
 
 namespace CognitiveServicesTemplate.Application.Implementation.Service
 {
-	public class OcrService : IUserService
+	public class OcrService : IOcrService
     {
         protected readonly ILogger<OcrService> Logger;
         protected readonly IMediator Mediator;

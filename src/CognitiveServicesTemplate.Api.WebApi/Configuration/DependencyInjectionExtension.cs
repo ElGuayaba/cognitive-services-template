@@ -29,7 +29,6 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
 
             // Infrastructure
             services.AddInfrastructureClients(configuration);
-            // services.AddInfrastructureServices(configuration);
 
 
             return services;
