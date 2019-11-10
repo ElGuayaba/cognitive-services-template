@@ -4,4 +4,8 @@
         <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CognitiveServicesTemplate.Infrastructure.Contract\CognitiveServicesTemplate.Infrastructure.Contract.csproj" />
+    </ItemGroup>
+
 </Project>

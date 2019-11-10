@@ -1,20 +1,18 @@
-using System;
-using System.Text;
+using CognitiveServicesTemplate.Api.WebApi.Identity;
+using CognitiveServicesTemplate.Api.WebApi.Service.Contract;
+using CognitiveServicesTemplate.Api.WebApi.Service.Implementation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using CognitiveServicesTemplate.Api.WebApi.Identity;
-using CognitiveServicesTemplate.Api.WebApi.Service.Contract;
-using CognitiveServicesTemplate.Api.WebApi.Service.Implementation;
+using System.Text;
 
 namespace CognitiveServicesTemplate.Api.WebApi.Configuration
 {
-    public static partial class DependencyInjectionExtension
+	public static partial class DependencyInjectionExtension
     {
         public static IServiceCollection AddDependencyInjection(this IServiceCollection services, IConfiguration configuration)
         {
@@ -26,15 +24,15 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<ITokenLoginService, TokenLoginService>();
 
-			// Application
-			services.AddApplicationServices(configuration);
+            // Application
+            services.AddApplicationServices(configuration);
 
-			// Infrastructure
-			// services.AddInfrastructureClients(configuration);
-			// services.AddInfrastructureServices(configuration);
+            // Infrastructure
+            services.AddInfrastructureClients(configuration);
+            // services.AddInfrastructureServices(configuration);
 
 
-			return services;
+            return services;
         }
 
         private static IServiceCollection AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)

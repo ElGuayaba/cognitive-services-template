@@ -43,6 +43,8 @@
     <ItemGroup>
       <ProjectReference Include="..\CognitiveServicesTemplate.Application.Contract\CognitiveServicesTemplate.Application.Contract.csproj" />
       <ProjectReference Include="..\CognitiveServicesTemplate.Application.Implementation\CognitiveServicesTemplate.Application.Implementation.csproj" />
+      <ProjectReference Include="..\CognitiveServicesTemplate.Infrastructure.Contract\CognitiveServicesTemplate.Infrastructure.Contract.csproj" />
+      <ProjectReference Include="..\CognitiveServicesTemplate.Infrastructure.Implementation\CognitiveServicesTemplate.Infrastructure.Implementation.csproj" />
     </ItemGroup>
 
 </Project>
