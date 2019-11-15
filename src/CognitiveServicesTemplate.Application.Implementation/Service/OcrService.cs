@@ -1,6 +1,5 @@
 ﻿using CognitiveServicesTemplate.Application.Contract.Service;
 using CognitiveServicesTemplate.Common.ErrorHandling;
-using MediatR;
 using Microsoft.Extensions.Logging;
 using OperationResult;
 using System.Threading;
@@ -12,12 +11,10 @@ namespace CognitiveServicesTemplate.Application.Implementation.Service
 	public class OcrService : IOcrService
     {
         protected readonly ILogger<OcrService> Logger;
-        protected readonly IMediator Mediator;
 
-        public OcrService(ILogger<OcrService> logger, IMediator mediator)
+        public OcrService(ILogger<OcrService> logger)
         {
             Logger = logger;
-            Mediator = mediator;
         }
 
         public async Task<Status<Error>> Create(string userId, CancellationToken cancellationToken = default)

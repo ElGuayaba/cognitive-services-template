@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 
 namespace CognitiveServicesTemplate.Api.WebApi.Configuration
@@ -20,6 +21,7 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
             services.AddCustomAuthentication(configuration);
             services.AddApiVersioning(configuration);
             services.AddCustomIdentity(configuration);
+			services.AddSwagger(configuration);
             
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<ITokenLoginService, TokenLoginService>();
@@ -81,5 +83,29 @@ namespace CognitiveServicesTemplate.Api.WebApi.Configuration
 
             return services;
         }
-    }
+
+		private static IServiceCollection AddSwagger(this IServiceCollection services, IConfiguration configuration)
+		{
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo
+				{
+					Version = "v1",
+					Title = "Cognitive Services Template",
+					Description = "An Azure Cognitive Services Wrapper API",
+					Contact = new OpenApiContact
+					{
+						Name = "Jose Alamo",
+						Email = string.Empty
+					},
+					License = new OpenApiLicense
+					{
+						Name = string.Empty,
+					}
+				});
+			});
+
+			return services;
+		}
+	}
 }
